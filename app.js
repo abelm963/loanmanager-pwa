@@ -52,11 +52,13 @@ async function apiPost(body) {
   const key = storage.apiKey;
   if (!key) throw new Error("API key not set. Go to Settings.");
 
+  // Key stays in URL
   const url = `${apiUrl}?key=${encodeURIComponent(key)}`;
 
+  // IMPORTANT: Use text/plain to avoid CORS preflight (OPTIONS)
   const res = await fetch(url, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "text/plain;charset=UTF-8" },
     body: JSON.stringify({ ...body })
   });
 

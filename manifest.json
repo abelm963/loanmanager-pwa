@@ -1,0 +1,10 @@
+{
+  "name": "LoanManager",
+  "short_name": "LoanManager",
+  "start_url": "./#/dashboard",
+  "display": "standalone",
+  "background_color": "#0B1220",
+  "theme_color": "#0B1220",
+  "description": "Mobile-first loan ledger for a micro-lending business (Google Sheets backend).",
+  "icons": []
+}
